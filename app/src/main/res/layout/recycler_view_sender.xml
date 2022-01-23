@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/sender_bg"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/msg_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_message"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/timeStamp_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_message"
+            android:textSize="14sp"
+            android:textColor="#344F4F"
+            android:layout_marginTop="10dp"
+            android:textStyle="normal"
+            android:layout_marginEnd="25dp"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_bg"
+    android:clickable="true"
+    tools:context=".AuthenticationActivity"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/imgBack"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:scaleType="centerCrop">
+
+        <LinearLayout
+            android:id="@+id/llTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:clickable="true"
+                android:hapticFeedbackEnabled="true"
+                android:paddingStart="-16dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/white"
+                android:focusable="true"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/welcome_to"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_go"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imgBack"
+        android:background="@drawable/auth_bg"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutAuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/auth_bg"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/authViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

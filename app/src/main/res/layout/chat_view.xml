@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="10dp"
+    app:cardCornerRadius="35dp"
+    android:paddingBottom="5dp"
+    app:cardBackgroundColor="@color/black"
+    android:layout_margin="5dp"
+    android:id="@+id/chat_content"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chat_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:civ_border_width="2dp"
+        android:src="@mipmap/programmer"
+        app:civ_border_color="#FF000000"
+        app:civ_circle_background_color="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="130dp">
+
+        <TextView
+            android:id="@+id/receiver_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_of_the_user"
+            android:textSize="16sp"
+            android:padding="3dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="normal"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email_of_the_user"
+            android:textSize="16sp"
+            android:padding="3dp"
+            android:textStyle="normal"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
