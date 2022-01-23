@@ -50,17 +50,7 @@ class Chats : Fragment() {
                         fStore.collection("chats").document(doc.id)
                             .collection("message").orderBy("id", Query.Direction.DESCENDING)
                             .addSnapshotListener { msgsnapshot, error ->
-                            if(snapshot!=null){
                                 Log.d("onError", "Some error occurred")
-                            }
-                            else{
-                                val id = msgsnapshot!!.documents[0]
-                                val message = id.get("message").toString()
-                                val receiver = id.get("receiver").toString()
-                                val receiverImage = id.get("profileDp").toString()
-                                val obj = ChatsModal(receiver, id.getString("id").toString(), message, receiverImage)
-                                chatsInfo.add(obj)
-                            }
                         }
                         chatAdapter = ChatAdapter(context as Activity, chatsInfo)
                         chatRecyclerView.adapter = chatAdapter
